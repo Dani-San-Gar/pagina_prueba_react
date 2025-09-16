@@ -1,12 +1,6 @@
-import { useEffect, useState } from "react";
+import SplitText from './SplitText';
 
 function Hero() {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setShow(true), 300);
-  }, []);
-
   return (
     <section
       id="hero"
@@ -16,47 +10,43 @@ function Hero() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        background: "#f9f9f9",
+        color: "black",
         overflow: "hidden",
+        textAlign: "center"
       }}
     >
-      <h1
-        style={{
-          fontSize: "3rem",
-          color: "#282c34",
-          margin: "0",
-          transform: show ? "translateY(0)" : "translateY(100px)",
-          opacity: show ? 1 : 0,
-          transition: "all 1s ease",
-        }}
-      >
-        Daniel Sánchez García
-      </h1>
-      <h2
-        style={{
-          fontSize: "1.5rem",
-          color: "#282c34",
-          marginTop: "1rem",
-          fontWeight: "normal",
-          transform: show ? "translateY(0)" : "translateY(100px)",
-          opacity: show ? 1 : 0,
-          transition: "all 1s ease 0.3s", 
-        }}
-      >
-        Desarrollador Full Stack
-      </h2>
-      <h3
-        style={{
-            fontSize: "1rem",
-            color: "#282c34",
-            marginTop: "1rem",
-            fontWeight: "normal",
-            transform: show ? "translateY(0)" : "translateY(100px)",
-            opacity: show ? 1 : 0,
-            transition: "all 1s ease 0.6s", 
-        }}
-      >
-        ¡Bienvenido a mi portafolio!
-      </h3>
+      <SplitText
+        text="Daniel Sánchez García"
+        tag="h1"
+        splitType="chars"        // animación letra por letra
+        delay={50}               // 50ms entre letras
+        duration={0.8}           // duración de la animación por letra
+        from={{ opacity: 0, y: 50 }}
+        to={{ opacity: 1, y: 0 }}
+      />
+
+      <SplitText
+        text="Desarrollador Web Full Stack"
+        tag="h2"
+        splitType="words"        // animación palabra por palabra
+        delay={125}              // delay mayor que el nombre
+        duration={0.8}
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        style={{ marginTop: '1rem', fontWeight: 'normal' }}
+      />
+
+      <SplitText
+        text="bienvenido a mi portafolio"
+        tag="h3"
+        splitType="words"        // animación palabra por palabra
+        delay={150}              // delay mayor que el nombre
+        duration={0.8}
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        style={{ marginTop: '1rem', fontWeight: 'normal' }}
+      />
     </section>
   );
 }

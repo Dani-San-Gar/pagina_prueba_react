@@ -7,7 +7,7 @@ function Contact() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "#e9e9e9",
+          background: "#e5e5e5",
           padding: "2rem",
         }}
       >
