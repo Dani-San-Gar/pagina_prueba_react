@@ -13,8 +13,8 @@ function About() {
       >
         <h2>Sobre mí</h2>
         <p style={{ maxWidth: "600px", textAlign: "center" }}>
-          Hola! Soy un desarrollador apasionado por la tecnología y el diseño.
-          Me gusta crear aplicaciones web modernas y funcionales.
+          Hola me llamo Daniel Sánchez García, soy un desarrollador apasionado por la tecnología y el diseño.
+          Me gusta crear aplicaciones, web modernas y funcionales. Espero que te guste mi portafolio.
         </p>
       </section>
     );

@@ -15,6 +15,7 @@ function Header() {
           zIndex: 1000,
         }}
       >
+        <a href="#hero" style={{ color: "white", textDecoration: "none" }}>Inicio</a>
         <a href="#about" style={{ color: "white", textDecoration: "none" }}>Sobre mí</a>
         <a href="#projects" style={{ color: "white", textDecoration: "none" }}>Proyectos</a>
         <a href="#contact" style={{ color: "white", textDecoration: "none" }}>Contacto</a>
